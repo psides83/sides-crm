@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const TEAM_ID = process.env.APPLE_TEAM_ID ?? "REPLACE_WITH_TEAM_ID";
+const TEAM_ID = process.env.APPLE_TEAM_ID ?? "Payton Sides";
 const BUNDLE_ID = process.env.APPLE_BUNDLE_ID ?? "PaytonSides.Sides-CRM";
 
 export function GET() {
