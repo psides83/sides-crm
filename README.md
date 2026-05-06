@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Apple Passwords (webcredentials)
+
+This app serves the Apple App Site Association file at both:
+
+- `/.well-known/apple-app-site-association`
+- `/apple-app-site-association`
+
+Set these Vercel environment variables:
+
+- `APPLE_TEAM_ID` (your Apple Developer Team ID)
+- `APPLE_BUNDLE_ID` (for this app: `PaytonSides.Sides-CRM`, unless changed)
+
+After deployment, verify both URLs return JSON with:
+
+```json
+{
+  "webcredentials": {
+    "apps": ["TEAMID.BUNDLEID"]
+  }
+}
+```
